@@ -8,7 +8,7 @@ This plugin allow the integration of the neotest neovim test framework with hard
 
 
 This plugin is a simply workaround and ideally it will not be necessary in a future. I 
-created because builtin mocha reporters don't produce an output suitable for efficient
+created it because builtin mocha reporters don't produce an output suitable for efficient
 transformation to the structure needed by neotest and because `hardhat test` doesn't allow
 to pass directly mocha options, see [these issue](https://github.com/NomicFoundation/hardhat/issues/4307).
 I don't like to add an aditional dependency but for know is the only solution that I found to don't mess
@@ -22,7 +22,13 @@ allow additional integration facilities.
 Install with you package manager of choice
 
 ```bash
-pnpm install hardhat-neovim
+pnpm add github:TheSnakeWitcher/hardhat-neovim -D
+```
+
+or 
+
+```bash
+pnpm add hardhat-neovim -D 
 ```
 
 Import the plugin in your `hardhat.config.js`:
