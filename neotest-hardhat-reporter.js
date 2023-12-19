@@ -7,8 +7,6 @@ var mocha =require('mocha');
 
 const {
     EVENT_RUN_END,
-    EVENT_SUITE_END,
-    EVENT_TEST_END,
 
     EVENT_TEST_PASS,
     EVENT_TEST_FAIL,
@@ -25,21 +23,9 @@ function MyReporter(runner) {
 
     let tests = {} ;
 
-    // runner.on(EVENT_TEST_END, function(test,err) {
-    //     console.log("error: ",err)
-    //     const testId = getTestId(test);
-    //     const testResult = getTestResult(test);
-    //     tests[testId] = testResult
-    // })
-
     runner.on(EVENT_TEST_FAIL, function (test, err) {
         const testId = getTestId(test);
         tests[testId] = { status: TEST_STATUS.failed , errors: {message: err.message} }
-
-        // test = clean(test);
-        // test.err = err.message;
-        // test.stack = err.stack || null;
-        // writeEvent(['fail', test]);
     });
 
     runner.on(EVENT_TEST_PENDING, function(test) {
@@ -77,20 +63,6 @@ function getTestParentsIds(suite) {
 
     return title
 }
-
-// function getTestResult(test) {
-//     if (!test.duration) {
-//         return { status: TEST_STATUS.skipped }
-//     } else if (test.err) {
-//         return { status: TEST_STATUS.failed , errors: {message: test.err.message} }
-//     } else {
-//         return { status: TEST_STATUS.passed }
-//     }
-// }
-
-// function writeEvent(event) {
-//   process.stdout.write(JSON.stringify(event) + '\n');
-// }
 
 
 mocha.utils.inherits(MyReporter, mocha.reporters.json);
