@@ -10,5 +10,7 @@ task(TASK_TEST)
     if (args.neovim) {
       hre.config.mocha.reporter = NEOTEST_HARDHAT_REPORTER_PATH
       await runSuper(args);
+    } else {
+        await runSuper(args);
     }
 })
