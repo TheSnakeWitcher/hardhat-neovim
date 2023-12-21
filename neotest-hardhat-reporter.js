@@ -25,7 +25,7 @@ function MyReporter(runner) {
 
     runner.on(EVENT_TEST_FAIL, function (test, err) {
         const testId = getTestId(test);
-        tests[testId] = { status: TEST_STATUS.failed , errors: {message: err.message} }
+        tests[testId] = { status: TEST_STATUS.failed , errors: [ {message: err.message} ]}
     });
 
     runner.on(EVENT_TEST_PENDING, function(test) {
