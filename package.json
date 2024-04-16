@@ -1,6 +1,6 @@
 {
     "name": "hardhat-neovim",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Hardhat plugin for neovim integration",
     "repository": {
         "type": "git",

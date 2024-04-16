@@ -22,11 +22,6 @@ allow additional integration facilities.
 Install with you package manager of choice
 
 ```bash
-pnpm add github:TheSnakeWitcher/hardhat-neovim -D
-```
-
-or 
-
 ```bash
 pnpm add hardhat-neovim -D 
 ```
