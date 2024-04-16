@@ -2,7 +2,10 @@
     "name": "hardhat-neovim",
     "version": "0.0.1",
     "description": "Hardhat plugin for neovim integration",
-    "repository": "github:TheSnakeWitcher/hardhat-neovim",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TheSnakeWitcher/hardhat-neovim.git"
+    },
     "author": "Alejandro Virelles <thesnakewitcher@gmail.com>",
     "license": "MIT",
     "main": "dist/index.js",
