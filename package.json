@@ -1,6 +1,6 @@
 {
     "name": "hardhat-neovim",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "description": "Hardhat plugin for neovim integration",
     "repository": {
         "type": "git",
@@ -27,8 +27,8 @@
     },
     "files": [
         "neotest-hardhat-reporter.js",
-        "dist/src/",
-        "src/",
+        "/dist",
+        "/src",
         "LICENSE",
         "README.md"
     ],
